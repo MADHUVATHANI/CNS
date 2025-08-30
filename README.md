@@ -1,6 +1,6 @@
 ## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
- 
-
+ ### Name: Madhuvathani.V
+ ### Reg.No: 212223040107
 ## AIM:
 
 To implement the simple substitution technique named Caesar cipher using C language.
@@ -13,10 +13,7 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 ## EXAMPLE:
 
-
-
 ![image](https://github.com/Hemamanigandan/CNS/assets/149653568/eb9c6c43-8c80-4cdd-b9d4-91705a311c79)
-
 
 ## ALGORITHM:
 
@@ -26,9 +23,35 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-4: Else subtract the key from the plain text.
 ### STEP-5: Display the cipher text obtained above.
 
+## PROGRAM :-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "MADHUVATHANI";
+    printf("Plain Text: %s \n",text);
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;
+    
+}
+```
 
-PROGRAM :-
+## OUTPUT :-
+<img width="1361" height="855" alt="image" src="https://github.com/user-attachments/assets/3e309a7a-a72f-4f8c-a8e3-85c8786c5005" />
 
+## RESULT:
+This code wsa executed successfully.
 
-
-OUTPUT :-
